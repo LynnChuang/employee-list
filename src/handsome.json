@@ -1,0 +1,20 @@
+{
+  "status": "200",
+  "data": [
+    {
+      "firstName": "Eric",
+      "middleName": "Ping",
+      "lastName": "Wang"
+    },
+    {
+      "firstName": "Eric1",
+      "middleName": "Ping1",
+      "lastName": "Wang1"
+    },
+    {
+      "firstName": "Eric2",
+      "middleName": "Ping2",
+      "lastName": "Wang2"
+      }
+  ]
+}

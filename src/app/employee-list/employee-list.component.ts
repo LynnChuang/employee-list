@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
+import { Employee } from '../employee';
 
 @Component({
   moduleId: module.id,
@@ -8,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeListComponent implements OnInit {
 
-  constructor() {}
+  constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
+  }
+
+  changeGender(employee: Employee){
+    employee.gender=!employee.gender;
   }
 
 }

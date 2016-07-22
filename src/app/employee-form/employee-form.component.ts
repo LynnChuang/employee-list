@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../employee';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   moduleId: module.id,
@@ -8,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeFormComponent implements OnInit {
 
-  constructor() {}
+  private employee: Employee;
+  constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
+    this.employee=new Employee();
   }
 
+  onSubmit(){
+    this.employeeService.employees.push(this.employee);
+    this.employee=new Employee();
+  }
 }
